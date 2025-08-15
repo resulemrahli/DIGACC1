@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/250725-create-users-table.sql
+  - include:
+      file: db/changelog/250725-create-courses-table.sql
+  - include:
+      file: db/changelog/250725-create-videos-table.sql
+  - include:
+      file: db/changelog/250725-create-course-materials-table.sql
+  - include:
+      file: db/changelog/250725-create-teachers-table.sql
+  - include:
+      file: db/changelog/250725-create-contact-forms-table.sql

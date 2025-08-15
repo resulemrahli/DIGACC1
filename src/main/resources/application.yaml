@@ -1,0 +1,37 @@
+server:
+  port: 3131
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  application:
+    name: digacc
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/digacc
+    username: postgres
+    password: P@ssw0rd
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+
+  liquibase:
+    enabled: true
+    database-change-log-lock-table: DATABASECHANGELOGLOCK
+    database-change-log-table: DATABASECHANGELOG
+    change-log: classpath:/db/db.changelog-master.yaml
+
+
+app:
+  jwt:
+    secret: ZGlnYWNjX3NlY3JldF9rZXlfZm9yX2p3dF90b2tlbl9zaWduaW5nX2FuZF92ZXJpZmljYXRpb24=
+    expiration: 86400
