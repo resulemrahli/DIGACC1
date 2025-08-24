@@ -18,12 +18,7 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
+
 
 repositories {
     mavenCentral()
