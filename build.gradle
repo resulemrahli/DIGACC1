@@ -7,11 +7,21 @@ plugins {
 group = 'az.project'
 version = '0.0.1-SNAPSHOT'
 
-
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
+    }
+}
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 
@@ -42,8 +52,17 @@ dependencies {
     implementation 'org.postgresql:postgresql:42.7.3'
     implementation 'org.liquibase:liquibase-core'
 
+
 }
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+tasks.named('bootJar') {
+    enabled = true
+}
+
+tasks.named('jar') {
+    enabled = false
+}
+
