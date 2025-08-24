@@ -19,7 +19,6 @@ configurations {
     }
 }
 
-
 repositories {
     mavenCentral()
 }
@@ -47,17 +46,9 @@ dependencies {
     implementation 'org.postgresql:postgresql:42.7.3'
     implementation 'org.liquibase:liquibase-core'
 
-
 }
 
 tasks.named('test') {
     useJUnitPlatform()
-}
-tasks.named('bootJar') {
-    enabled = true
-}
-
-tasks.named('jar') {
-    enabled = false
 }
 
