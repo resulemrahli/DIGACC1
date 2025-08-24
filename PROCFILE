@@ -1,0 +1,2 @@
+release: ./gradlew build -x test
+web: java -jar build/libs/*.jar
